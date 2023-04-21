@@ -1,0 +1,31 @@
+\PassOptionsToPackage{titlesec}{newparttoc}
+\documentclass[ngerman,leqno]{uol-physics-report}
+
+\partner{Hendrik Philip}{Gorka}{hendrik.philipp.gorka@uni-oldenburg.de}{6478477}
+\partner{Jan Eike}{Suchard}{jan.eike.suchard@uni-oldenburg.de}{5945617}
+\partner{Terje}{Zirks}{terje.zirks@uni-oldenburg.de}{6417547}
+\group{2}
+\module{phy215}{Grundpraktikum Physik \rom{2} -- für 2-Fach-Bachelor}
+\semester{Sommersemester 2023}
+\tutor{Christoph Plaßmeyer}
+\supervisor{Marcel Behrens}
+
+\makeatletter
+\@addtoreset{section}{part}
+\makeatother 
+
+\usepackage{menukeys}
+\usepackage{csquotes}
+\usepackage{biblatex}
+\usepackage{listings}
+\usepackage{subcaption}
+
+\captionsetup{font=footnotesize}
+
+\addbibresource{../global-sources.bib}
+\addbibresource{sources.bib}
+
+\graphicspath{{./images/}}
+\sisetup{output-open-uncertainty = [, output-close-uncertainty = ], 
+uncertainty-separator = \,}
+
