@@ -1,5 +1,5 @@
 \PassOptionsToPackage{titlesec}{newparttoc}
-\documentclass[ngerman,leqno]{uol-physics-report}
+\documentclass[ngerman,leqno,x11names]{uol-physics-report}
 
 \partner{Hendrik Philip}{Gorka}{hendrik.philipp.gorka@uni-oldenburg.de}{6478477}
 \partner{Jan Eike}{Suchard}{jan.eike.suchard@uni-oldenburg.de}{5945617}
@@ -20,6 +20,8 @@
 \usepackage{listings}
 \usepackage{subcaption}
 \usepackage{enumitem}
+\usepackage{tcolorbox}
+\usepackage{xcolor}
 
 \captionsetup{font=footnotesize, format=hang}
 
@@ -29,4 +31,17 @@
 \graphicspath{{./images/}}
 \sisetup{output-open-uncertainty = [, output-close-uncertainty = ], 
 uncertainty-separator = \,}
+
+\newenvironment{question}[2]
+{
+    \begin{tcolorbox}[adjusted title=\textbf{Zu Frage #1}]
+        \begin{center}
+            #2
+        \end{center}
+    \tcblower}
+{
+\end{tcolorbox}
+}
+
+\tcbset{colback=white,colframe=Maroon0, coltitle=white}
 
