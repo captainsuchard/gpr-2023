@@ -7,19 +7,15 @@ on:
   workflow_dispatch:
 
 jobs:
-  determine-protocol:
-    name: Determine current Protocol folder
-    runs-on: ubuntu-latest
-    steps:
-      - name: Determine last Monday
-        run: echo "CURRENT_PROTOCOL=$(date --date 'Monday - 7 days' --iso-8601)" >> "$GITHUB_ENV"
-
   generate-pdf:
     name: Generate PDF File for Protocol
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+
+      - name: Determine last Monday
+        run: echo "CURRENT_PROTOCOL=$(date --date 'Monday - 7 days' --iso-8601)" >> "$GITHUB_ENV"
       
       - name: Build PDF
         uses: xu-cheng/latex-action@v2
