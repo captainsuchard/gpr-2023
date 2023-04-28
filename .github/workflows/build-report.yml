@@ -1,0 +1,50 @@
+name: build-report
+run-name: GPR Protokoll erstellen
+
+on:
+  schedule:
+    - 0 1 * 4-7 1
+  workflow_dispatch:
+
+jobs:
+  determine-protocol:
+    name: Determine current Protocol folder
+    runs-on: ubuntu-latest
+    steps:
+      - name: Determine last Monday
+        run: echo "CURRENT_PROTOCOL=$(date --date 'Monday - 7 days' --iso-8601)" >> "$GITHUB_ENV"
+
+  generate-pdf:
+    name: Generate PDF File for Protocol
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      
+      - name: Build PDF
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: ${{ env.CURRENT_PROTOCOL }}*/protokoll.tex
+          latexmk_use_lualatex: true
+
+      - uses: actions/upload-artifact@v3
+        with:
+          name: Versuchsprotokoll
+          path: ${{ env.CURRENT_PROTOCOL }}*/protokoll.pdf
+
+      - name: Send mail
+        uses: dawidd6/action-send-mail@v3
+        with:
+          connection_url: ${{secrets.MAIL_CONNECTION}}
+          secure: true
+          subject: Versuchsprotokoll vom ${{ env.CURRENT_PROTOCOL }}
+          # Required recipients' addresses:
+          to: jan.eike.suchard@uni-oldenburg.de
+          # Required sender full name (address can be skipped):
+          from: Jan Eike Suchard
+          # Optional plain body:
+          body: Im Anhang befindet sich das aktuelle Versuchsprotokoll welches automatisch gebaut wurde.
+          # Optional attachments:
+          attachments: ${{ env.CURRENT_PROTOCOL }}*/protokoll.pdf
+          # Optional priority: 'high', 'normal' (default) or 'low'
+          priority: high
