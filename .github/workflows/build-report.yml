@@ -35,8 +35,11 @@ jobs:
       - name: Send mail
         uses: dawidd6/action-send-mail@v3
         with:
-          connection_url: ${{secrets.MAIL_CONNECTION}}
+          server_address: ${{secrets.MAIL_SERVER}}
+          server_port: 587
           secure: true
+          username: ${{secrets.MAIL_USERNAME}}
+          password: ${{secrets.MAIL_PASSWORD}}
           subject: Versuchsprotokoll vom ${{ env.CURRENT_PROTOCOL }}
           # Required recipients' addresses:
           to: jan.eike.suchard@uni-oldenburg.de
