@@ -21,6 +21,7 @@ jobs:
         uses: xu-cheng/latex-action@v2
         with:
           root_file: ${{ env.CURRENT_PROTOCOL }}*/protokoll.tex
+          glob_root_file: true
           latexmk_use_lualatex: true
 
       - uses: actions/upload-artifact@v3
