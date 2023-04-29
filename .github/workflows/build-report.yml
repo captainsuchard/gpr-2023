@@ -54,13 +54,20 @@ jobs:
           secure: true
           username: ${{secrets.MAIL_USERNAME}}
           password: ${{secrets.MAIL_PASSWORD}}
-          subject: Versuchsprotokoll vom ${{ env.CURRENT_PROTOCOL }}
+          subject: Aktuelles Versuchsprotokoll
           # Required recipients' addresses:
-          to: jan.eike.suchard@uni-oldenburg.de
+          to: jan.eike.suchard@uni-oldenburg.de,hendrik.philipp.gorka@uni-oldenburg.de,terje.zirks@uni-oldenburg.de
           # Required sender full name (address can be skipped):
-          from: Jan Eike Suchard
+          from: Jan Eike Suchard (GitHub Actions)
           # Optional plain body:
-          body: Im Anhang befindet sich das aktuelle Versuchsprotokoll welches automatisch gebaut wurde.
+          body: |
+            Im Anhang befindet sich das aktuelle Versuchsprotokoll für die
+            Versuche aus der letzten Woche. Sollten in dem Protokoll Sachen
+            fehlen, so muss in Overleaf unter Umständen noch einmal die
+            Synchronisation nach GitHub durchgeführt werden. Dies ist in
+            Overleaf unter "Menü -> Sync -> GitHub" möglich. Dort muss
+            dann der Button geklickt werden, dass die Änderungen nach
+            GitHub gepusht werden sollen.
           # Optional attachments:
           attachments: protokoll.pdf,protokoll.log
           # Optional priority: 'high', 'normal' (default) or 'low'
