@@ -16,7 +16,7 @@ können, werden die folgenden Schreibweisen/Bezeichnungen engeführt:
 \begin{table}[H]
     \caption{Benutzte Schreibweisen/Bezeichnungen in diesem Protokoll, entnommen aus \cite[S. 30]{script}}
     \centering
-    \renewcommand{\arraystretch}{1.3}
+    \renewcommand{\arraystretch}{1.2}
     \begin{tabular}{|l|l|l|}
         \hline
         \textbf{Symbol} & \textbf{Einheit} & \textbf{Physikalische Größe} \\ \hline \hline
@@ -33,9 +33,44 @@ können, werden die folgenden Schreibweisen/Bezeichnungen engeführt:
         $\gamma$ & & Gammaquant \\ \hline
         $h$ & \unit{\joule\second} & Plancksche Konstante: $h = \qty{6.62606957(29)e-34}{\joule\second}$ \\ \hline
         $f$ & \unit{\per\second} & Frequenz eines Gammaquants \\ \hline
-        $E=hf$ & \unit{\joule}, \unit{\electronvolt} & Energie eines Gammaquants; $ \qty{1}{\electronvolt} \approx \qty{1.602e-19}{\joule}$ \\ \hline
+        $E=hf$ & \unit{\joule}, \unit{\electronvolt} & Energie eines Gammaquants;$ \qty{1}{\electronvolt} \approx \qty{1.602e-19}{\joule}$ \\ \hline
         $T_{1/2}$ & \unit{\second} & Halbwertszeit \\ \hline
         $\lambda = \ln \frac{2}{T_{1/2}}$ & \unit{\per\second} & Zerfallskonstante \\ \hline
+        $\tau = \frac{1}{\lambda}$ & \unit{\second} & mittlere Lebensdauer \\ \hline
+        $\mu_{\tau}$ & \unit{\per\cm} & Linearer Abschwächungskoeffizient für den Photoeffekt \\ \hline
+        $\mu_{\sigma}$ & \unit{\per\cm} & Linearer Abschwächungskoeffizient für den \textsc{Compton}-Effekt \\ \hline
+        $\mu_{\kappa}$ & \unit{\per\cm} & Linearer Abschwächungskoeffizient für die Paarerzeugung \\ \hline
+        $\mu = \mu_{\tau} + \mu_{\sigma} + \mu_{\kappa}$ & \unit{\per\cm} & Totaler linearer Abschwächungskoeffizient \\\hline
     \end{tabular}
 \end{table}
+
+Mit den nun eingeführten Schreibweisen wird nun die Schreibweise von Atomkernen
+(Nukliden) eingeführt:
+\begin{equation*}
+    \isotope[A][Z]{X}_N \qquad \mathrm{z.B.:} \quad 
+    \isotope[1][1]{H}_0 \quad 
+    \isotope[3][1]{H}_2 \quad
+    \isotope[137][55]{Cs}_{82} \quad
+    \isotope[241][95]{Am}_{146}
+\end{equation*}
+Jedoch sind kürzere Notationen wie:
+\begin{equation*}
+    \isotope[A]{X} \qquad \mathrm{z.B.:} \quad
+    \isotope[1]{H} \quad 
+    \isotope[90]{Sr} \quad
+    \isotope[137]{Cs} \quad
+    \isotope[241]{Am}
+\end{equation*}
+oder
+\begin{center}
+    X-A \qquad z.B.: \quad
+    H-1 \quad
+    Sr-90 \quad
+    Cs-137 \quad
+    Am-241
+\end{center}
+üblicherweise genutzt.
+\newpage
+\section{Radioaktiver Zerfall}
+\subsection{Alpha-Zerfall}
 \end{document}
