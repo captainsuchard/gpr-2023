@@ -190,4 +190,93 @@ In den hier beschriebenen Versuchen spielt der Paarbildungseffekt aufgrund der
 Energie der verwendeten $\gamma$-Strahlung jedoch keine Rolle.
 
 \subsection{Photoeffekt}
+Unter dem inneren Photoeffekt versteht man die Totalabsorption eines
+$\gamma$-Quants an der Elektronenhülle eines Atomkerns. Aufgrund der 
+Impulserhaltung findet der Wechselwirkungsprozess an stark gebundenen Elektronen
+statt. Das Elektron erhält hierbei die kinetische Energie $E_k$, die der
+Differenz der Energie des $\gamma$-Quants ($h \cdot f$) und der Bindungsenergie
+des Elektron $E_b$ enspricht:
+\begin{equation}\label{eq:Kinetische Energie Photoeffekt}
+    E_k = h \cdot f - E_b
+\end{equation}
+
+Die Impulserhaltung ist hierbei erfüllt, da der Atomkern einen Rückstoßimpuls
+aufnimmt, wegen seiner großen Masse im Vergleich zum Elektron jedoch keine
+kinetische Energie aufnimmt. Gleiches gilt für die in 
+\cref{fig:Schmea Photoeffekt} gezeichnete Situation.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.3\linewidth]{theory/schema-photoeffekt}
+    \caption{Prinzip des Photoeffekts. Ein $\gamma$-Quant (rot) trifft auf ein 
+    Elektron (blau), das stark an den Atomkern (grau) gebunden ist. Das Elektron
+     verlässt das Atom in Richtung des blauen Pfeils. --- 
+     \textsc{Quelle}: \cite[S.32, Abb. 3]{script}}
+    \label{fig:Schema Photoeffekt}
+\end{figure}
+
+\subsection{\textsc{Compton}-Effekt}
+Die elastische und inkohärente Streuung von $\gamma$-Quanten an freien oder sehr
+schwach gebundenen Elektronen heißt \textsc{Compton}-Streuung 
+(vgl. \cref{fig:Schema Compton-Effekt}). Hierbei ist die vom Elektron
+aufgenommene kinetische Energie $E_k$ die Differenz zwischen der Energie des
+einfallenden $\gamma$-Quants ($h \cdot f$) und der Energie des gestreuten
+Quants ($h \cdot f_s$):
+\begin{equation}\label{eq:Kinetische Energie Compton}
+    E_k = hf - hf_s
+\end{equation}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.3\linewidth]{theory/schema-compton}
+    \caption{
+        Prinzip des COMPTON-Effektes. Ein $\gamma$-Quant ($\gamma$, rot) trifft auf ein freies
+        oder nur sehr schwach an einen Kern gebundenes Elektron (blau), an dem 
+        es gestreut wird. Das gestreute Quant ($\gamma_s$) fliegt unter dem Winkel
+        $\theta$ weiter, das Elektron in Richtung des blauen Pfeils.
+    }
+    \label{fig:Schema Compton-Effekt}
+\end{figure}
+
+\section{Abschwächungsgesetz}
+Wird nach \cref{fig:absorbtion-dicke} der Durchgang monoenergetischer 
+$\gamma$-Strahlung durch einen Absorber der Dicke $x$, mit der Intensität $I$
+der Strahlung vor dem Absorber als $I_0$, so gilt für Strahlung die ohne
+Wechselwirkungsprozess den Absorber verlässt:
+\begin{equation}
+    I(x) = I_0 \exp(-\mu x) = I_0 \exp(- (\mu_\tau + \mu_\sigma) x)
+\end{equation}
+wobei $\mu$ der totale lineare Abschwächungskoeffizient ist. Dieser setzt sich
+aus dem linearen Abschwächungskoeffizienten für den Photoeffekt $\mu_\tau$ und
+dem linearer Abschwächungskoeffizienten für den \textsc{Compton}-Effekt 
+$\mu_\sigma$ zusammen.
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[t]{0.45\linewidth}
+        \centering
+        \includegraphics[width=0.5\linewidth]{theory/abschwaechung-absorber}
+        \caption{
+            Zur Abschwächung der Intensität $I$ einer Strahlung beim 
+            Durchgang durch einen Absorber (gelb) der Dicke $x$ ---
+            \textsc{Quelle}: \cite[S. 33, Abb. 5 (links)]{script}
+        }
+        \label{fig:absorbtion-dicke}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.45\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{theory/abschwaechung-compton}
+        \caption{
+            Beispiel für ein $\gamma$-Quant, das in einem Absorber unter einem 
+            kleinen Winkel \textsc{Compton}-gestreut wird. Das gestreute Quant $\gamma_s$
+            verlässt den Absorber und kann bei kleinem Streuwinkel in einem 
+            dahinter stehenden Detektor D nachgewiesen werden ---
+            \textsc{Quelle}: \cite[S. 33, Abb. 5 (rechts)]{script}
+        }
+        \label{fig:absorbtion-compton}
+    \end{subfigure}
+    \caption{Darstellung von verschiedenen Abschwächungen}
+    \label{fig:absorbtion}
+\end{figure}
 \end{document}
