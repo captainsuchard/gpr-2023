@@ -20,7 +20,7 @@ können, werden die folgenden Schreibweisen/Bezeichnungen engeführt:
     \begin{tabular}{|l|l|l|}
         \hline
         \textbf{Symbol} & \textbf{Einheit} & \textbf{Physikalische Größe} \\ \hline \hline
-        $Z$ & & Ordnung- oder Kernladungszahl: Zahl der Protonen in einem Atomkern \\ \hline
+        $Z$ & & Ordnungs- oder Kernladungszahl: Zahl der Protonen im Atomkern \\ \hline
         $N$ & & Zahl der Neutronen in einem Atomkern \\ \hline
         $A = Z + N$ & & Massenzahl \\ \hline
         $p$ & & Proton \\ \hline
@@ -72,7 +72,7 @@ oder
 üblicherweise genutzt.
 \newpage
 \section{Radioaktiver Zerfall}
-\subsection{Alpha-Zerfall}
+\subsection{\texorpdfstring{$\alpha$}{Alpha}-Zerfall}
 Alpha-Zerfall ($\alpha$-Zerfall) findet hauptsächlich bei Atomkernen mit einer
 Massenzahl $A > 200$ statt, wenn der Atomkern X durch den Zerfall in einen 
 stabileren, energetisch niedrigeren, Zustand Y übergehen kann.
@@ -96,7 +96,98 @@ energetischen Grundzustand (vgl. \cref{fig:Schema Alpha-Zerfall}).
     Übergang von den Energieniveaus $E_1$ und $E_2$ in den Grundzustand von Y, 
     der per Definition die Energie 0 hat, erfolgt in diesem Beispiel unter 
     Emission der Gammaquanten $\gamma_1$ bzw. $\gamma_2$. Die energetischen 
-    Grundzustände der Kerne sind blau gezeichnet\\ \textsc{Quelle:} \cite[S. 30, Abb. 1]{script}}
+    Grundzustände der Kerne sind blau gezeichnet --- \textsc{Quelle:} \cite[S. 30, Abb. 1]{script}}
     \label{fig:Schema Alpha-Zerfall}
 \end{figure}
+
+$\alpha$- und $\gamma$-Strahlung haben hierbei diskrete Energien, die für den
+$\alpha$-Zerfall im Bereich \qty{4}{\mega\electronvolt} bis 
+\qty{9}{\mega\electronvolt} und für die $\gamma$-Quanten liegen die Energien
+im Bereich von \qty{10}{\kilo\electronvolt} bis \qty{3}{\mega\electronvolt}.
+
+\subsection{\texorpdfstring{$\beta$}{Beta}-Zerfall}
+$\beta$-Zerfall kommt in den drei Arten
+\begin{itemize}[noitemsep, nosep]
+    \item $\beta^-$-Zerfall
+    \item $\beta^+$-Zerfall
+    \item Elektroneneinfang
+\end{itemize}
+vor. In den durchgeführten Versuchen ist jedoch nur der $\beta^-$-Zerfall 
+betrachtet, welcher bei Atomkernen jeder Massenzahl stattfinden kann. Die
+Voraussetzung für den $\beta^-$-Zerfall ist, dass der Mutterkern X durch den
+Zerfall in einen energetisch niedrigeren, stabileren Zustand des Tochterkerns
+übergehen kann.
+\begin{equation*}
+    \isotope[A][Z]{X}_N \to \isotope[A][Z+1]{Y}_{N-1} + \beta^- + \mathbf{\bar{v}}
+\end{equation*}
+Auch hierbei können $\gamma$-Quanten emittiert werden, wenn beim Zerfall nicht
+der Grundzustand des Tochterkerns bevölkert wird, sondern ein angeregter Zustand
+bevölkert wird (vgl. \cref{fig:Schema Beta-Zerfall}). Da bei dem Zerfall neben
+dem Tochterkern ein Elektron und ein Antineutrino enstehen, die Energie
+aufnehmen können, hat die $\beta$-Strahlung keine diskrete Energie, sondern hat
+eine kontinuierliche Energieverteilung.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.3\linewidth]{theory/beta-zerfall-schema}
+    \caption{Schema eines $\beta^-$-Zerfalls des Kerns X. In diesem Beispiel 
+    gibt es nur einen $\beta$-Zerfallskanal, über den das Energieniveau E1 des 
+    Tochterkerns Y bevölkert wird. Der Übergang von diesem Energieniveau in den 
+    Grundzustand von Y kann direkt unter Emission des Gammaquants $\gamma_1$
+    erfolgen, oder über den Umweg des Energieniveaus E2 unter
+    Emission der Gammaquanten $\gamma_2$ und $\gamma_3$. --- 
+    \textsc{Quelle:} \cite[S. 31, Abb. 2]{script}}
+    \label{fig:Schema Beta-Zerfall}
+\end{figure}
+
+\section{Zerfallsgesetz und Aktivität}
+Für einen eizigen Atomkern eines radioaktiven Isotops kann keine Aussage
+getroffen werden, ob dieser innerhalb eines bestimmten Zeitraums zerfallen wird.
+Daher können nur Aussagen über eine große Menge von Atomkernen getroffen werden.
+
+Zu einem Zeitpunkt $t$ seien $N(t)$ Kerne eines radioaktiven Isotops X 
+vorhanden. Die Zahl der innerhalb des Zeitintervalls $\mathrm{d}t$ zerfallenden
+Kerne, $\mathrm{d}N(t)$ ist proportional zu $N(t)$ und $\mathrm{d}t$. Mit der
+Zerfallskonstanten $\lambda$ gilt:
+\begin{equation}\label{eq:Theorie - Zerfallsgleichung}
+    \mathrm{d}N(t) = - \lambda \cdot N(t) \cdot \mathrm{d}t
+\end{equation}
+wobei das Minuszeichen die Abnahme der vorhandenen Kerne signalisiert.
+
+Aus \cref{eq:Theorie - Zerfallsgleichung} kann abgelesen werden, dass die
+Zerfallskonstante den Bruchteil der Kerne eines radioaktiven Isotops angibt, der
+im Mittel pro Sekunde zerfällt.
+\begin{equation}\label{eq:Zerfallskonstante}
+    \lambda = \left| - \dfrac{\mathrm{d}N(t)}{N(t) \mathrm{d}t} \right|
+\end{equation}
+
+Wird nun $N_0$ definiert als die vorhandenen Atomkerne des Isotops X zum 
+Zeitpunkt $t=0$, so folgt nach der Integration von 
+\cref{eq:Theorie - Zerfallsgleichung} für die Zahl der nicht zefallenen Kerne
+des Isotops X zum Zeitpunkt $t$ folgende Gleichung:
+\begin{equation}\label{eq:Vorhandene Kerne}
+    N(t) = N_0 \exp(-\lambda \cdot t)
+\end{equation}
+
+Als \textsl{Aktivität} $A$ wird die folgende Größe bezeichnet:
+\begin{equation}\label{eq:Aktivität}
+    A(t) = N(t) \cdot \lambda = \left| \diff{N(t)}{t} \right| = \lambda N_0 \exp(- \lambda t)
+\end{equation}
+Die SI-Einheit der Aktivität ist das \textsc{Becquerel}: $\qty{1}{\becquerel} = 1 \frac{\text{Zerfall}}{\unit{\second}}$
+\newpage
+
+
+\section{Wechselwirkung von \texorpdfstring{$\gamma$}{Gamma}-Strahlung mit Materie}
+Die beim Zerfall von Isotopen freigesetze $\gamma$-Strahlung hat eine
+Wechselwirkung auf Materie, welche über die folgenden drei Effekte erfolgt:
+\begin{itemize}[noitemsep,nosep]
+    \item innerer Fotoeffekt
+    \item \textsc{Compton}-Effekt
+    \item Paarbildungseffekt
+\end{itemize}
+
+In den hier beschriebenen Versuchen spielt der Paarbildungseffekt aufgrund der
+Energie der verwendeten $\gamma$-Strahlung jedoch keine Rolle.
+
+\subsection{Photoeffekt}
 \end{document}
