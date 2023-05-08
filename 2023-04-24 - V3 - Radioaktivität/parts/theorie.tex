@@ -62,15 +62,41 @@ Jedoch sind kürzere Notationen wie:
     \isotope[241]{Am}
 \end{equation*}
 oder
-\begin{center}
-    X-A \qquad z.B.: \quad
+\begin{equation*}
+    \text{X-A \qquad z.B.: \quad
     H-1 \quad
     Sr-90 \quad
     Cs-137 \quad
-    Am-241
-\end{center}
+    Am-241}
+\end{equation*}
 üblicherweise genutzt.
 \newpage
 \section{Radioaktiver Zerfall}
 \subsection{Alpha-Zerfall}
+Alpha-Zerfall ($\alpha$-Zerfall) findet hauptsächlich bei Atomkernen mit einer
+Massenzahl $A > 200$ statt, wenn der Atomkern X durch den Zerfall in einen 
+stabileren, energetisch niedrigeren, Zustand Y übergehen kann.
+Der Zerfall geschieht hierbei nach dem folgenden Muster:
+\begin{equation*}
+    \isotope[A][Z]{X}_N \to \isotope[A-4][Z-2]{Y}_{N-2} + \isotope[4][2]{He}_{2}
+     \qquad \qquad \text{\isotope[4][2]{He}$_{2}$ wird auch}\  \alpha \text{-Teilchen genannt}
+\end{equation*}
+Wird beim $\alpha$-Zerfall einer der angeregten Energieniveaus des Atomkerns Y
+bevölkert, so findet nach dem Zerfall eine Emission eines oder mehrerer
+$\gamma$-Quanten statt. Durch diese Emission ist der Atomkern Y nun in seinem
+energetischen Grundzustand (vgl. \cref{fig:Schema Alpha-Zerfall}).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.3\linewidth]{theory/alpha-zerfall-schema}
+    \caption{Schema eines $\alpha$-Zerfalls des Kerns X. In diesem Beispiel gibt
+    es zwei $\alpha$-Zerfallskanäle, bei denen die $\alpha$-Teilchen $\alpha_1$
+    oder $\alpha_2$ emittiert werden und bei denen zwei unterschiedliche 
+    Energieniveaus $E_1$ und $E_2$ des Tochterkerns Y bevölkert werden. Der 
+    Übergang von den Energieniveaus $E_1$ und $E_2$ in den Grundzustand von Y, 
+    der per Definition die Energie 0 hat, erfolgt in diesem Beispiel unter 
+    Emission der Gammaquanten $\gamma_1$ bzw. $\gamma_2$. Die energetischen 
+    Grundzustände der Kerne sind blau gezeichnet\\ \textsc{Quelle:} \cite[S. 30, Abb. 1]{script}}
+    \label{fig:Schema Alpha-Zerfall}
+\end{figure}
 \end{document}
