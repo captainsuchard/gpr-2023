@@ -3,5 +3,42 @@
 \graphicspath{{\subfix{../images/}}}
 \begin{document}
 \section{Abstandsgesetz}\label{sec:Abstandsgesetz}
- 
+Bei dem Versuch des Abstandgesetzes soll die Quelle Cs-137 in einem Abstand von $d=d_1 +a (2,3,4,5,6,7,8,9,10,15,20,25,30,35,40)$ vom Szintillationsdetektor gemessen werden. Die Ergebnisse der Messung sollen dann für n(d) doppelt-logarithmisch über d aufgetragen werden und ein nicht linearer Kurven fit aufgetragen werden, mit der Gleichung (19) aus dem Skript als Zielfunktion, wobei $n_1$ als einziger freier Parameter anzunehmen ist und $r_0$ als festen Parameter. 
+\begin{equation}
+    n(d)=n_1(1-\frac{d}{\sqrt{r_0^2 + d^2}})
+\end{equation}
+Die Bestimmung der benötigten netto Zählrate erfolgt über die Gleichung (15) aus dem skript welche wie folgt lautet 
+\begin{equation}
+    n=m-m_0=\frac{M}{\Delta t}-\frac{M_0}{\Delta t_0}
+\end{equation}
+welche eine netto Zählrate von 554,94 ergibt.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{2023-04-24 - V3 - Radioaktivität/images/Nicht linearer fit .png }
+    \caption{n(d) über d aufgetragen, mit der Anpassung eines nicht linearen Fits nach Gleichung 19}
+    \label{Abb.1}
+\end{figure}
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|l|}
+\hline
+Abstand d=d\_1+a /cm & Messzeit  t/s & Zählrate  M \\ \hline
+2                    & 100           & 199270      \\ \hline
+3                    & 100           & 143775      \\ \hline
+4                    & 100           & 108679      \\ \hline
+5                    & 100           & 85864       \\ \hline
+6                    & 100           & 69109       \\ \hline
+7                    & 100           & 56230       \\ \hline
+8                    & 100           & 47833       \\ \hline
+9                    & 100           & 40479       \\ \hline
+10                   & 100           & 35486       \\ \hline
+15                   & 100           & 20656       \\ \hline
+20                   & 100           & 14492       \\ \hline
+25                   & 100           & 11140       \\ \hline
+30                   & 100           & 9621        \\ \hline
+35                   & 100           & 8152        \\ \hline
+40                   & 100           & 7359        \\ \hline
+\end{tabular}
+\end{table}
+Wie zusehen ist, sind die Messwerte sehr nahe am Linearen fit angelegt, sind in der Abbildung \ref{Abb.1} und sich dies auch durch Einsetzen der Werte in die Gleichung bestätigt. Es lässt sich auch noch am Grafen erkennen, dass trotz der doppelt logarithmischen Auftragung die Funktion doch noch einen leichten nicht linear ähnlichen Verlauf in der Abbildung aufweist wie in den vorherigen Versuchen, wo durch das doppelt logarithmischen Auftragen die Funktionen immer recht linear dargestellt werden konnten.
 \end{document}
