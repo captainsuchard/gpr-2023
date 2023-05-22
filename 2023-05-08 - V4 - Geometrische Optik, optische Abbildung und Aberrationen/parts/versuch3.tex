@@ -3,4 +3,31 @@
 \graphicspath{{\subfix{../images/}}}
 \begin{document}
 \section{Schärfentiefe}
+In diesem Versuch wird die Schärfentiefe bestimmt. Dazu wird ein 0,2 mm breiter Spalt zwischen die Lampe und die Linse montiert. Vor diesem wird ein Interferenzfilter angebracht, welcher Licht mit maximaler Wellenlänge von 530 nm durchlässt. Dann wird die Linse in in eine Position gebracht, wo eine Verkleinerung auf der Kamera stattfindet. Dann werden in einen Linsenhalter vor der Linse Kreisblenden mit verschiedenen Durchmessern D montiert.
+
+Dann wird die Kamera so verschoben, dass das Bild scharf erscheint, woraufhin die Linse so verschoben wird, dass die Kamera eine Verbreiterung der Halbwertsbreite des Spaltbildes um 20\% erreicht. Diese verschiebung wird von der Startposition aus in beide Richtungen durchgeführt, sodass sich eine Strecke $2\Delta b$ ergibt, in welcher das Bild innerhalb der definierten Unschärfe liegt. Da bei der Messung die Skalierung an der Dreiecksschiene genutzt werden musste und jeweils zwei Werte benötigt wurden, ist eine Messungenauigkeit von 0,4 mm anzunehmen. In der Tabelle \ref{tab31} sind die Messwerte dargestellt.
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+D/mm &  $2\Delta b/mm$   \\ \hline
+11,1 & 9 \\ \hline
+12,5 & 8 \\ \hline
+14,3 & 7 \\ \hline
+16,7 & 7 \\ \hline
+20   & 6 \\ \hline
+25   & 5 \\ \hline
+\end{tabular}
+\caption{Gemessene Abstände in Abhängigkeit der Durchmesser der Kreisblenden}
+\label{tab31}
+\end{table}
+In Abb \ref{abb31} sind die Messwerte in einem Diagramm aufgetragen. Der Fit ergibt ein Proportionalitätsfaktor von $74,17554\pm6,9$. Es ist zu sehen, dass der Fit zwar innerhalb der Messungenauigkeiten liegt, allerdings trifft er einige Messpunkte eher suboptimal. Dies kann daran liegen, dass die Messung an der Schiene relativ ungenau war und das nur sechs Werte gemessen wurden, sodass z.B. die beiden identischen Werte bei D=14,3 mm und bei D=16,7 mm ein linearen Fit erschweren. Nichtsdestotrotz legt der Fit eine PRoportionalität, wie sie theoretisch zu erwarten wäre, nahe.
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.7\textwidth]{2023-05-08 - V4 - Geometrische Optik, optische Abbildung und Aberrationen/images/versuch3/schärfe.png}
+    \caption{Graphische Darstellung der gemessenen Strecken über 1/D inkl. eines linearen Fits}
+    \label{abb31}
+\end{figure}
+
+
 \end{document}

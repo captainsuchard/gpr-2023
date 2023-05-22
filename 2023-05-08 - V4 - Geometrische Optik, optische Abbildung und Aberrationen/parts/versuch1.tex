@@ -15,16 +15,27 @@ In \ref{tab1} ist das gemessene d für verschiedene $\lambda_{max}$, die zugehö
 \begin{tabular}{|S[table-format=3.1]|S[table-format=2.1]|S[table-format=1.3]|l|}
 \hline
 {$\lambda_{max}$ /nm }& {d/cm} & {n}     & {f/cm}                          \\ \hline
-450                                & 59,3 & 1,525 & 29,16 $\pm$0,04 \\ \hline
-489.2                              & 58,4 & 1,522 & 29,34 $\pm$0,04 \\ \hline
-510                                & 58,1 & 1,521 & 29,41 $\pm$0,04\\ \hline
-530                                & 57,8 & 1,52  & 29,47 $\pm$0,04 \\ \hline
-580                                & 56,9 & 1,517 & 29,65 $\pm$0,04\\ \hline
-632.4                              & 56,4 & 1,515 & 29,75 $\pm$0,04 \\ \hline
-670                                & 55,9 & 1,514 & 29,85 $\pm$0,04 \\ \hline
-690                                & 55,7 & 1,513 & 29,89 $\pm$0,04 \\ \hline
+450   & 59,3 & 1,525 & 29,16 $\pm$0,04 \\ \hline
+489.2 & 58,4 & 1,522 & 29,34 $\pm$0,04 \\ \hline
+510   & 58,1 & 1,521 & 29,41 $\pm$0,04\\ \hline
+530   & 57,8 & 1,52  & 29,47 $\pm$0,04 \\ \hline
+580   & 56,9 & 1,517 & 29,65 $\pm$0,04\\ \hline
+632.4 & 56,4 & 1,515 & 29,75 $\pm$0,04 \\ \hline
+670   & 55,9 & 1,514 & 29,85 $\pm$0,04 \\ \hline
+690   & 55,7 & 1,513 & 29,89 $\pm$0,04 \\ \hline
 \end{tabular}
 \caption{Messwerte inkl. der berechneten Brechzahl n und der Brennweite in Abhängigkeit der maximalen Wellenlänge}
 \label{tab1}
 \end{table}
+In dem Graphen \ref{chrom} ist neben den Messwerten auch der Fit gegeben. Die benutzte Funktion ist:
+\begin{equation}
+    f(\lambda)=\frac{R_1}{n(\lambda)-1}
+\end{equation}
+Dabei ist $R_1$ der gesuchte Krümmungsradius der nicht-planen Linsenoberfläche. Der durch Regression mit Matlab ermittelte Wert liegt bei 15,325 cm. 
+\begin{figure}
+    \centering
+    \includegraphics[width=0.7\textwidth]{2023-05-08 - V4 - Geometrische Optik, optische Abbildung und Aberrationen/images/versuch1/chrom.png}
+    \caption{Messwerte inkl. Fehlerbalken und Fit durch die Werte}
+    \label{chrom}
+\end{figure}
 \end{document}
