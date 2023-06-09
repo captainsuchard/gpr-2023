@@ -2,6 +2,28 @@
 \documentclass[../protokoll.tex]{subfiles}
 \graphicspath{{\subfix{../images/}}}
 \begin{document}
-\section{Versuch 1}
-In diesem Versuch 
+\section{Bestimmung der Breite eines Beugunsspaltes}
+In diesem Versuch wird die Breite eines Beugungsspaltes bestimmt. Dazu wird vor einem Laser ein Strahlaufweitungsswystem montiert, welches den Strahldurchmesser des Licht des Lasers (Wellenlänge $\lambda=632,8$ $nm$) vergrößert.Davor ist der zu untersuchende Beugungsspalt, welcher zuerst, mittels der davorliegenden Kamera, genau ausgerichtet wird, ehe dazwischen eine Linse mit Brennweite $f=(120\pm 2)$ $mm$ montiert wird. Die Kamera wird in der Brennebene der Linse platziert und zusätzlich wird ein Neutralfilterrad eingesetzt, um die Lichtintensität abzuschwächen, da die Messung mit der Kamera sonst ungenau wird.
+
+Nun werden auf der Kamera die Intensitätsmaxima aufgenommen. wozu aufgrund der Auflösung mehrere Bilder nötig sind. Ein Pixel auf dem Bild entspricht einer Breite von $p=5,6$ $\mu m$.
+Aus den Pixelpositionen x lassen sich mit $u=x\cdot p$ die räumlichen Positionen u der Maxima und Minima berechnen.
+Das x des 0-te Maximums lässt sich aus den Positionen der $\pm$1-ten Minima bestimmen. Zusätzlich lässt sich aus der Beugungswinkel $\theta$ annähern als $\theta \approx \frac{u}{f}$. Zusammen mit den Formeln (18) und (20) aus dem Skript \cite{script} lassen sich für jede Extremstelle Werte für die Spaltbreite D berechnen. Für das 0-te Maximum ergeben sich somit folgende Werte: x=318 und u=1,78 mm.  In der Tabelle \ref{tab11} sind die Positionen, räumlichen Koordinaten und berechneten Spaltbreiten der ersten Maxima und Minima gegeben.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|lll|lll|}
+\hline
+  & \multicolumn{3}{l|}{Minima}                                     & \multicolumn{3}{l|}{Maxima}                                     \\ \hline
+n & \multicolumn{1}{l|}{x}   & \multicolumn{1}{l|}{u/mm}   & D/mm   & \multicolumn{1}{l|}{x}   & \multicolumn{1}{l|}{u/mm}   & D/mm   \\ \hline
+1 & \multicolumn{1}{l|}{401} & \multicolumn{1}{l|}{2,2456} & 0,1631 & \multicolumn{1}{l|}{444} & \multicolumn{1}{l|}{2,4864} & 0,1538 \\ \hline
+2 & \multicolumn{1}{l|}{487} & \multicolumn{1}{l|}{2,7272} & 0,1603 & \multicolumn{1}{l|}{524} & \multicolumn{1}{l|}{2,9344} & 0,1618 \\ \hline
+3 & \multicolumn{1}{l|}{575} & \multicolumn{1}{l|}{3,22}   & 0,1582 & \multicolumn{1}{l|}{604} & \multicolumn{1}{l|}{3,3824} & 0,1645 \\ \hline
+4 & \multicolumn{1}{l|}{654} & \multicolumn{1}{l|}{3,6624} & 0,1614 & \multicolumn{1}{l|}{688} & \multicolumn{1}{l|}{3,8528} & 0,164  \\ \hline
+5 & \multicolumn{1}{l|}{727} & \multicolumn{1}{l|}{4,0712} & 0,1657 & \multicolumn{1}{l|}{757} & \multicolumn{1}{l|}{4,2392} & 0,1693 \\ \hline
+6 & \multicolumn{1}{l|}{792} & \multicolumn{1}{l|}{4,4352} & 0,1716 & \multicolumn{1}{l|}{816} & \multicolumn{1}{l|}{4,5696} & 0,1765 \\ \hline
+\end{tabular}
+\caption{Darstellung der gemessenen Werte für x und der berechneten Werte für D}
+\label{tab11}
+\end{table}
+Somit ergibt sich ein Mittelwert $\Bar{D}=0,1642$ $mm$ mit einer Standardabweichung von $\sigma=0,0058$ $mm$.
 \end{document}

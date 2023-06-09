@@ -3,6 +3,68 @@
 \graphicspath{{\subfix{../images/}}}
 \begin{document}
 \section{Sphärische Aberration}
+In diesem Versuch wird zur Minimierung der chromatischen Aberrationen ein Interferenzfilter F
+mit $\lambda_{max} \approx \qty{530}{\nano\meter}$ vor dem Messda angebracht. Nun werden,
+mit dem gleichen Messablauf wie im vorherigen Versuch, fünf Kreisringblenden mit unterschiedlichen
+Radien $r$ an der Linse eingesetzt und die Brennweite nach dem \textsc{Bessel}-Verfahren bestimmt.
 
+Hierfür werden die Radien $r$ der Kreisringblenden und die Abstände zwischen den beiden
+scharf erscheinenden Punkte notiert und daraus der Abstand $d$ ermittelt.
+\begin{table}[H]
+    \centering
+    \begin{tabular}{S[table-format=2.1]|S[table-format=2.1(1)]|S[table-format=2.1(1)]|S[table-format=2.1(1)]}
+         {Radius der Blende $r$ / \unit{\milli\meter}} & {$P_1$/ \unit{\centi\meter}} & {$P_2$ / \unit{\centi\meter}} & {Abstand $d$ / \unit{\centi\meter}} \\ \hline \hline
+         7.1 & 35.3(1) & 93.0(1) & 57.7(2) \\ \hline
+         14.7 & 35.2(1) & 93.6(1) & 58.4(2) \\ \hline
+         19.5 & 35.0(1) & 93.7(1) & 58.7(2) \\ \hline
+         23.3 & 34.6(1) & 94.1(1) & 59.5(2) \\ \hline
+         26.6 & 34.4(1) & 94.6(1) & 60.2(2)  \\ \hline
+    \end{tabular}
+    \caption{Messpunkte $P_1$ und $P_2$ der scharf erscheinenden Abbildung des Messdias G mit dem berechneten Abstand $d$ über den Radius der Blende $r$}
+    \label{tab:v2-messwerte}
+\end{table}
+
+Mit der Formel
+\begin{equation}
+        f=\dfrac{1}{4}\left( e-\dfrac{d^2}{e}\right)
+\end{equation}
+und dem vorher bestimmten Abstand $e = \qty{141.5}{\centi\meter}$, der zwischen dem Dia und der Kamera gemessen wurde,
+kann nun die Brennweite $f$ für jede der Blenden bestimmt werden:
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{S[table-format=2.1]|S[table-format=2.1(1)]|S[table-format=2.2(2)]}
+         {Radius der Blende $r$ / \unit{\milli\meter}} & {Abstand $d$ / \unit{\centi\meter}} & {Brennweite $f$ / \unit{\centi\meter}} \\ \hline \hline
+         7.1 & 57.7(2) & 29.49(04)\\ \hline
+         14.7 & 58.4(2) & 29.34(04) \\ \hline
+         19.5 & 58.7(2) & 29.28(04) \\ \hline
+         23.3 & 59.5(2) & 29.12(04) \\ \hline
+         26.6 & 60.2(2) & 28.97(04) \\ \hline
+    \end{tabular}
+    \caption{Berechnete Brennweiten $f$ über den Radius $r$ der Blenden mit dem zugehörigen Abstand $d$ ziwschen den Abbildungspunkten.}
+    \label{tab:v2-werte}
+\end{table}
+
+Die nun berechneten Brennweiten werden in einem Punktdiagramm über $r^2$ dargestellt, damit ein linearer Fit auf die Daten
+angewendet werden kann (vgl. \cref{fig:v2-graph}).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{2023-05-08 - V4 - Geometrische Optik, optische Abbildung und Aberrationen/images/versuch2/graph.png}
+    \caption{Brennweiten $f$ als Punktdiagramm über $r^2$ mit der Ausgleichsgeraden in {\color{red} rot}}
+    \label{fig:v2-graph}
+\end{figure}
+
+Anhand der durch die Datenpunkte gelegte Ausgleichsgerade mit der Funktion:
+\begin{equation}
+    f(x) = \num{29.538(025)} - \num{7.7418(05813)e-4} \cdot x
+\end{equation}
+können nun für die Brennweite $f_0$ und die Konstante $k$ Werte entnommen werden:
+\begin{align*}
+    \begin{split}
+        f_0 &= \num{29.538(025)} \\
+        k &= \num{7.7418(05813)e-4}
+    \end{split}
+\end{align*}
 
 \end{document}
